@@ -1,1 +1,1 @@
-# quality-of-achitecture
+# Quality of Architecture
