@@ -6,5 +6,6 @@ Following sections define standards for software development projects in Moravia
 - [Versioning](VERSIONING.md)
 - [Languages](LANGUAGES.md)
 - [API](API.md)
+- [Documentation](DOCS.md)
 - [Continuous integration](CI.md)
 - [Deployment](DEPLOYMENT.md)
