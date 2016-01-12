@@ -1,3 +1,3 @@
 # Quality of Architecture
 
-- (Versioning)[VERSIONING.md]
+- [Versioning](VERSIONING.md)
