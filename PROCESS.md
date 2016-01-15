@@ -133,6 +133,7 @@ To meet Moravia standard for quality of software development it is required what
 - [Done](#done)
 
 There are currently three types of bug workflow currently recognized: Live Bug, Hotfix, Development bug.
+
 Bug business value and tags should follow these recommendations [Bug Classification](BUGCLASSIFICATION.md)
 
 [Back to top](#process)
@@ -158,7 +159,7 @@ These bugs are already planned and can be taken to Ready state.
 ## Ready
 Bug in this state should be prioritized and properly prepared so that any developer can start working on these.
 
-++Hotfix++ : These should be added directly here. So that they can be fixed asap
+__Hotfix__ : These should be added directly here. So that they can be fixed asap
 #####Done/Doing Custom Field
 - **Doing** 
 Anyone can add Bug here but this should be only used for more urgent Bugs. These should not be taken further until properly prioritized by manager/scrummaster
@@ -182,9 +183,12 @@ In this state Bugs should be reviewed that they are fixed.
 Default state should indicate that Review is still in progress.
 - **Done**
 Should indicate that Review is done and Bug is waiting to be merged into appropriate branch.
-++Hotfix++ These bug should be merged directly to Live branch so they can be deployed ASAP and after that merged to main development branch, and they should be moved to [TEST](#test)-Done state
-++Development Bug++ these should be already merged to whichever branch they were discovered on (ie. Feature Branch, Dev branch...). After Review they can be moved directly to [Done](#done)-Done
-++Live Bug++ These should be merged to main development branch and moved to [DEV](#dev)
+
+__Hotfix__ These bug should be merged directly to Live branch so they can be deployed ASAP and after that merged to main development branch, and they should be moved to [TEST](#test)-Done state
+
+__Development Bug__ these should be already merged to whichever branch they were discovered on (ie. Feature Branch, Dev branch...). After Review they can be moved directly to [Done](#done)-Done
+
+__Live Bug__ These should be merged to main development branch and moved to [DEV](#dev)
 
 [Back to top](#bug-workflow)
 ## DEV
