@@ -38,9 +38,11 @@ The goal of this chapter is to provide a consistent set of naming conventions th
   * Use Pascal case for Enum types and value names.
   * Use abbreviations sparingly.
   * Do not use an Enum suffix on Enum type names.
-  * Use a singular name for most Enum types, 
-  * Use a plural name for Enum types that are bit fields (flags).
+  * Use a **singular name** for most Enum types, 
+  * Use a **plural name** for Enum types that are bit fields (flags).
   * Always add the FlagsAttribute to a bit field Enum type.
+  * **AVOID** publicly exposing enums with only one value.
+  * **DO** provide a value of zero on simple enums.
 * Enum design (https://msdn.microsoft.com/en-us/library/ms229058(v=vs.110).aspx)
 * Use bitwise operators when evaluating flags enum
 * Consider to not store flags in SQL-type databases
