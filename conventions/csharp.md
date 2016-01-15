@@ -85,3 +85,13 @@ public enum MyEnum
 * **Do** throw exceptions from instance constructors if appropriate.
 * **Do not call virtual members on an object inside its constructors.** Calling a virtual member causes the most-derived override to be called regardless of whether the constructor for the type that defines the most-derived override has been called.
  
+## Exceptions
+* **Do report execution failures by throwing exceptions.** Exceptions are the primary means of reporting errors in frameworks. If a member cannot successfully do what it is designed to do, it should be considered an execution failure and an exception should be thrown. **Do not return error codes.**
+* **Do throw the most specific (the most derived) exception that makes sense.** For example, throw ArgumentNullException and not its base type ArgumentException if a null argument is passed. *Throwing System.Exception as well as catching System.Exception are nearly always the wrong thing to do.*
+* **Do not use exceptions for the normal flow of control**, if possible. Except for system failures and operations with potential race conditions, you should write code that does not throw exceptions. For example, you can check preconditions before calling a method that may fail and throw exceptions
+* Do not throw exceptions from exception filter blocks and (explicitly) from finally blocks.
+* **You should not swallow errors by catching nonspecific exceptions, such as System.Exception, System.SystemException**, and so on in .NET code. Do catch only specific errors that the code knows how to handle.  You should catch a more specific exception, or re-throw the general exception as the last statement in the catch block. There are cases when swallowing errors in applications is acceptable, but such cases are rare. 
+* **Do** prefer using an empty throw when catching and re-throwing an exception. This is the best way to preserve the exception call stack.
+* **DO NOT THROW NEW EXCEPTION("message") IN CATCH BLOCK**, always throw specific exception and include original exception object to preserve stacktrace: **throw new SomethingBadHappendException("message", originalException)**
+
+
